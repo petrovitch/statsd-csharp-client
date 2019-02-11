@@ -11,5 +11,7 @@ namespace StatsdClient
         /// Sends a line of stats data to the server asynchronously.
         /// </summary>
         Task SendAsync(string line);
-    }
+
+        void Send(string line);
+	}
 }
