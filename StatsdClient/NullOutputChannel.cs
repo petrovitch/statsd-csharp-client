@@ -8,5 +8,9 @@ namespace StatsdClient
         {
             return Task.FromResult(0);
         }
+
+        public void Send(string line)
+        {
+        }
     }
 }

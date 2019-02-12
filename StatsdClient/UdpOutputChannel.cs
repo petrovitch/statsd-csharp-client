@@ -36,5 +36,11 @@ namespace StatsdClient
             var payload = Encoding.UTF8.GetBytes(line);
             await _udpClient.SendAsync(payload, payload.Length);
         }
+
+        public void Send(string line)
+        {
+	        var payload = Encoding.UTF8.GetBytes(line);
+	        _udpClient.Send(payload, payload.Length);
+		}
     }
 }

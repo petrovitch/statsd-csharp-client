@@ -32,6 +32,7 @@ namespace StatsdClient
             await SendWithRetryAsync(line, _reconnectEnabled ? _retryAttempts - 1 : 0);
         }
 
+
         private async Task SendWithRetryAsync(string line, int attemptsLeft)
         {
             string errorMessage = null;
@@ -82,6 +83,11 @@ namespace StatsdClient
                     }
                 }
             }
+        }
+
+        public void Send(string line)
+        {
+	        throw new NotImplementedException();
         }
     }
 }
